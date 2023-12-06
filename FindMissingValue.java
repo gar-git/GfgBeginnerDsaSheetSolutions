@@ -3,24 +3,15 @@ import java.util.*;
 class FindMissingValue{
     
     int findMissingValue(int array[], int n){
-        Arrays.sort(array);
-        ArrayList<Integer> arr= new ArrayList<Integer>();
-        for(int d:array){
-            arr.add(d);
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum = sum ^ i;
         }
-        
-     int  temp=Collections.min(arr);
-      arr.clear();
-        for(int i=0;i<n;i++){
-            
-            if(array[i]==temp){
-                temp++;
-            }
-            else if(array[i]!=temp){
-                return temp;
-            }
+        for (int i = 0; i < v.size(); i++) {
+            sum = sum ^ v.get(i);
         }
-        return 0;
+        return sum;
+    }
     }
     public static void main(String arp[]){
         FindMissingValue obj= new FindMissingValue();
