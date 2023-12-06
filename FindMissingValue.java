@@ -2,13 +2,13 @@ import java.util.*;
 
 class FindMissingValue{
     
-    int findMissingValue(int array[], int n){
-        int sum = 0;
+    int missingNumber(int v[], int n) {
+       int sum = 0;
         for (int i = 1; i <= n; i++) {
             sum = sum ^ i;
         }
-        for (int i = 0; i < v.size(); i++) {
-            sum = sum ^ v.get(i);
+        for (int i = 0; i < v.length; i++) {
+            sum = sum ^ v[i];
         }
         return sum;
     }
